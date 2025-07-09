@@ -1,17 +1,17 @@
-import Abuot from "./component/abuot";
-import Navbar from "./component/navbar";
-// import TextForm from "./component/textForm";
+import Home from "./component/home";
+import About from "./component/about";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App(){
+
 return(
   <>
-
-<Navbar title='TextUtils ' />
-
-<Abuot/>
-{/* <div className="container">
-<TextForm heading='Enter the Text' /> 
-</div> */}
-
+<Router>
+  <Routes>
+    <Route path="/" element={<Home/>} />
+    
+    <Route path="/about" element={<About/>} />
+  </Routes>
+</Router>
   </>
 )
 }
